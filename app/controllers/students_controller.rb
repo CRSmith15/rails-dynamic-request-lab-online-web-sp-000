@@ -3,7 +3,7 @@ class StudentsController < ActiveRecord::Base
     @students = Student.all
   end
 
-  def show 
+  def show
     @student = Student.find(params[:id])
     @student_first_name = @student.first_name
   end
