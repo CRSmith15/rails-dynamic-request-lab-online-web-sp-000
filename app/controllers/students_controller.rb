@@ -1,5 +1,10 @@
-class StudentsController < ApplicationController
+class StudentsController < ActiveRecord::Base
   def index
     @students = Student.all
+  end
+
+  def show 
+    @student = Student.find(params[:id])
+    @student_first_name = @student.first_name
   end
 end
